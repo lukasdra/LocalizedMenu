@@ -50,13 +50,13 @@ Lokalizační nástroj a lokalizovaná nabídka(menu) pro uživatele Sublime Tex
 - Přepni v příkazovém panelu
 	- `Ctrl+Shift+P`, napiš`lmxx`(*xx* je kód země) pro přepnutí
 
-# Add A Language
-- copy `locale/en/en.json` to `locale/<locale>/<locale>.json`, localize to your language
-- copy `menu/<version>/en/*` to `menu/<version>/<locale>/*`, localize to your language
-- For example, now add locale named `my` for Sublime Text Build 3999
-	- open `LocalizedMenu` dir, via `Preference` -> `Languages` -> `Add a language`
-	- enter `locale`, copy `en` to `my`
-	- enter `my`, rename `en.json` to `my.json`, edit as:
+# Přidat jazyk
+- kopíruj `locale/en/en.json` do `locale/<locale>/<locale>.json`, přelož do svého jazyka
+- kopíruj `menu/<version>/en/*` do `menu/<version>/<locale>/*`, přelož do svého jazyka
+- Například, přidání překladu pojmenovaného  `my` pro Sublime Text Build 3999
+	- otevři adresář `LocalizedMenu`, přes `Preference` -> `Languages` -> `Add a language`
+	- otevři `locale`, kopíruj `en` na `my`
+	- otevři `my`, přejmenuj `en.json` na `my.json`, uprav jako:
 
 	```JavaScript
 	{
@@ -67,24 +67,25 @@ Lokalizační nástroj a lokalizovaná nabídka(menu) pro uživatele Sublime Tex
 	}
 	```
 
-	- enter`menu/3999`, copy `en` to `my`, and tranlate all `caption` in menu files
-	- detect language via `Preference` -> `Languages` -> `Detect`, then `MyLanguage (my)` display
+	- otevři `menu/3999`, kopíruj `en` na `my`, a přelož všechny položky `caption` v souborech nabídek
+	- detekuj jazyk přes `Preference` -> `Languages` -> `Detect`, pak zobraz `MyLanguage (my)`
 
-	> **locale configs**<br>
-	> link： the target locale linked to<br>
-	> hidden： hide menu item<br>
-	> caption： language name，locale code will auto add extraly<br>
-	> mnemonic： hotkey，optional，make sure caption contain it，Case sensitive
+	> **konfigurace překladu**<br>
+	> link： cílový soubor s překladem<br>
+	> hidden： skrytá nabídka<br>
+	> caption： jazyk<br>
+	> mnemonic： klávesová zkratka，volitelná
 
-# Submit A Language
-- locale name must be named as `<languageCode>` or `<languageCode>_<countryCode>`
-	- `<languageCode>` lowercase, `<countryCode>` uppercase, (ignore this if work on local)
-	- Language: https://www.wikipedia.org/wiki/ISO_639-1
-	- Country: https://www.wikipedia.org/wiki/ISO_3166-1
-- Fork repo
-- Make pull request
+# Přihlášení jazyka
+- název překladu musí být pojmenován jako `<languageCode>` nebo `<languageCode>_<countryCode>`
+	- `<languageCode>` malým písmem, `<countryCode>` velkým písmem
+	- Jazyk: https://www.wikipedia.org/wiki/ISO_639-1
+	- Země: https://www.wikipedia.org/wiki/ISO_3166-1
+- Vytvoř fork repozitáře
+- Vytvoř žádost o změny
 
-# Locales & Contributors
+# Jazyky a překladatelé
+- cs_CZ Czech *by [lukasdra](https://github.com/lukasdra)*
 - de_DE Deutsch *by [Standarduser](https://github.com/Standarduser)*
 - es Español *by [Christopher](https://t.me/Azriel_7589)*
 - es_ES Español *by [Dastillero](https://github.com/dap39)*
@@ -97,7 +98,7 @@ Lokalizační nástroj a lokalizovaná nabídka(menu) pro uživatele Sublime Tex
 - zh_CN 简体中文 *by [Zam](https://github.com/zam1024t)*
 - zh_TW 繁体中文 *by [Zam](https://github.com/zam1024t)*
 
-# Related discuss
+# Související
 - https://github.com/wbond/package_control_channel/pull/5665
 - https://github.com/rexdf/ChineseLocalization/issues/10
 
