@@ -1,0 +1,5 @@
+[
+	{ "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Konce řádků Windows (CRLF)", "checkbox": true },
+	{ "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Konce řádků Unix (LF)", "checkbox": true },
+	{ "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Konce řádků Mac OS (CR)", "checkbox": true }
+]

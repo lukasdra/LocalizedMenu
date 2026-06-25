@@ -1,0 +1,991 @@
+[
+	{
+		"caption": "Soubor",
+		"mnemonic": "F",
+		"id": "file",
+		"children":
+		[
+			{ "command": "new_file", "caption": "Nový soubor", "mnemonic": "N" },
+
+			{ "command": "prompt_open_file", "caption": "Otevřít soubor", "mnemonic": "O", "platform": "!OSX" },
+			{ "command": "prompt_open_folder", "caption": "Otevřít složku", "platform": "!OSX" },
+			{ "command": "prompt_open", "caption": "Otevřít", "platform": "OSX" },
+			{
+				"caption": "Otevřít nedávné",
+				"mnemonic": "R",
+				"children":
+				[
+					{ "command": "reopen_last_file", "args": {"source": "window"}, "caption": "Znovu otevřít poslední soubor" },
+					{ "caption": "-" },
+					{ "command": "open_recent_file", "args": {"index": 0 } },
+					{ "command": "open_recent_file", "args": {"index": 1 } },
+					{ "command": "open_recent_file", "args": {"index": 2 } },
+					{ "command": "open_recent_file", "args": {"index": 3 } },
+					{ "command": "open_recent_file", "args": {"index": 4 } },
+					{ "command": "open_recent_file", "args": {"index": 5 } },
+					{ "command": "open_recent_file", "args": {"index": 6 } },
+					{ "command": "open_recent_file", "args": {"index": 7 } },
+					{ "command": "open_recent_file", "args": {"index": 8 } },
+					{ "command": "open_recent_file", "args": {"index": 9 } },
+					{ "command": "open_recent_file", "args": {"index": 10 } },
+					{ "command": "open_recent_file", "args": {"index": 11 } },
+					{ "caption": "-" },
+					{ "command": "open_recent_folder", "args": {"index": 0 } },
+					{ "command": "open_recent_folder", "args": {"index": 1 } },
+					{ "command": "open_recent_folder", "args": {"index": 2 } },
+					{ "command": "open_recent_folder", "args": {"index": 3 } },
+					{ "command": "open_recent_folder", "args": {"index": 4 } },
+					{ "command": "open_recent_folder", "args": {"index": 5 } },
+					{ "command": "open_recent_folder", "args": {"index": 6 } },
+					{ "command": "open_recent_folder", "args": {"index": 7 } },
+					{ "command": "open_recent_folder", "args": {"index": 8 } },
+					{ "command": "open_recent_folder", "args": {"index": 9 } },
+					{ "command": "open_recent_folder", "args": {"index": 10 } },
+					{ "command": "open_recent_folder", "args": {"index": 11 } },
+					{ "caption": "-" },
+					{ "command": "clear_recent_files", "caption": "Vyčistit položky" }
+				]
+			},
+			{
+				"caption": "Znovu otevřít s kódováním",
+				"id": "reopen_with_encoding",
+				"children":
+				[
+					{ "caption": "UTF-8", "command": "reopen", "args": { "encoding": "utf-8" } },
+					{ "caption": "UTF-16 LE", "command": "reopen", "args": { "encoding": "utf-16 le" } },
+					{ "caption": "UTF-16 BE", "command": "reopen", "args": { "encoding": "utf-16 be" } },
+					{ "caption": "-" },
+					{ "caption": "Arabic (ISO 8859-6)", "command": "reopen", "args": { "encoding": "Arabic (ISO 8859-6)" } },
+					{ "caption": "Arabic (Windows 1256)", "command": "reopen", "args": { "encoding": "Arabic (Windows 1256)" } },
+					{ "caption": "Baltic (ISO 8859-4)", "command": "reopen", "args": { "encoding": "Baltic (ISO 8859-4)" } },
+					{ "caption": "Baltic (Windows 1257)", "command": "reopen", "args": { "encoding": "Baltic (Windows 1257)" } },
+					{ "caption": "Celtic (ISO 8859-14)", "command": "reopen", "args": { "encoding": "Celtic (ISO 8859-14)" } },
+					{ "caption": "Central European (ISO 8859-2)", "command": "reopen", "args": { "encoding": "Central European (ISO 8859-2)" } },
+					{ "caption": "Central European (Mac)", "command": "reopen", "args": { "encoding": "Central European (Mac)" } },
+					{ "caption": "Central European (Windows 1250)", "command": "reopen", "args": { "encoding": "Central European (Windows 1250)" } },
+					{ "caption": "Chinese (GB18030)", "command": "reopen", "args": { "encoding": "Chinese (GB18030)" } },
+					{ "caption": "Cyrillic (ISO 8859-5)", "command": "reopen", "args": { "encoding": "Cyrillic (ISO 8859-5)" } },
+					{ "caption": "Cyrillic (KOI8-R)", "command": "reopen", "args": { "encoding": "Cyrillic (KOI8-R)" } },
+					{ "caption": "Cyrillic (KOI8-U)", "command": "reopen", "args": { "encoding": "Cyrillic (KOI8-U)" } },
+					{ "caption": "Cyrillic (Windows 1251)", "command": "reopen", "args": { "encoding": "Cyrillic (Windows 1251)" } },
+					{ "caption": "Cyrillic (Windows 866)", "command": "reopen", "args": { "encoding": "Cyrillic (Windows 866)" } },
+					{ "caption": "DOS (CP 437)", "command": "reopen", "args": { "encoding": "DOS (CP 437)" } },
+					{ "caption": "Estonian (ISO 8859-13)", "command": "reopen", "args": { "encoding": "Estonian (ISO 8859-13)" } },
+					{ "caption": "Greek (ISO 8859-7)", "command": "reopen", "args": { "encoding": "Greek (ISO 8859-7)" } },
+					{ "caption": "Greek (Windows 1253)", "command": "reopen", "args": { "encoding": "Greek (Windows 1253)" } },
+					{ "caption": "Hebrew (CP 862)", "command": "reopen", "args": { "encoding": "Hebrew (CP 862)" } },
+					{ "caption": "Hebrew (ISO 8859-8)", "command": "reopen", "args": { "encoding": "Hebrew (ISO 8859-8)" } },
+					{ "caption": "Hebrew (Windows 1255)", "command": "reopen", "args": { "encoding": "Hebrew (Windows 1255)" } },
+					{ "caption": "Nordic (ISO 8859-10)", "command": "reopen", "args": { "encoding": "Nordic (ISO 8859-10)" } },
+					{ "caption": "Nordic (Windows 865)", "command": "reopen", "args": { "encoding": "Nordic (Windows 865)" } },
+					{ "caption": "Romanian (ISO 8859-16)", "command": "reopen", "args": { "encoding": "Romanian (ISO 8859-16)" } },
+					{ "caption": "Turkish (ISO 8859-9)", "command": "reopen", "args": { "encoding": "Turkish (ISO 8859-9)" } },
+					{ "caption": "Turkish (Windows 1254)", "command": "reopen", "args": { "encoding": "Turkish (Windows 1254)" } },
+					{ "caption": "Vietnamese (Windows 1258)", "command": "reopen", "args": { "encoding": "Vietnamese (Windows 1258)" } },
+					{ "caption": "Western (ISO 8859-1)", "command": "reopen", "args": { "encoding": "Western (ISO 8859-1)" } },
+					{ "caption": "Western (ISO 8859-15)", "command": "reopen", "args": { "encoding": "Western (ISO 8859-15)" } },
+					{ "caption": "Western (ISO 8859-3)", "command": "reopen", "args": { "encoding": "Western (ISO 8859-3)" } },
+					{ "caption": "Western (Mac Roman)", "command": "reopen", "args": { "encoding": "Western (Mac Roman)" } },
+					{ "caption": "Western (Windows 1252)", "command": "reopen", "args": { "encoding": "Western (Windows 1252)" } },
+					{ "caption": "-" },
+					{ "caption": "Hexadecimal", "command": "reopen", "args": { "encoding": "Hexadecimal" } }
+				]
+			},
+			{ "command": "force_reopen_as", "args": {"type": "image"}, "caption": "Reopen File as Image" },
+			{ "command": "force_reopen_as", "args": {"type": "text"}, "caption": "Reopen File as Text" },
+			{ "command": "clone_file", "args": {"add_to_selection": true, "retain_viewport_position": true}, "caption": "Rozdělit náhled", "mnemonic": "e" },
+			{ "command": "save", "args": {"async": true}, "caption": "Uložit", "mnemonic": "S" },
+			{
+				"caption": "Uložit s kódováním",
+				"id": "save_with_encoding",
+				"children":
+				[
+					{ "caption": "UTF-8", "command": "save", "args": { "async": true, "encoding": "utf-8" } },
+					{ "caption": "UTF-8 with BOM", "command": "save", "args": { "async": true, "encoding": "utf-8 with bom" } },
+					{ "caption": "UTF-16 LE", "command": "save", "args": { "async": true, "encoding": "utf-16 le" } },
+					{ "caption": "UTF-16 LE with BOM", "command": "save", "args": { "async": true, "encoding": "utf-16 le with bom" } },
+					{ "caption": "UTF-16 BE", "command": "save", "args": { "async": true, "encoding": "utf-16 be" } },
+					{ "caption": "UTF-16 BE with BOM", "command": "save", "args": { "async": true, "encoding": "utf-16 be with bom" } },
+					{ "caption": "-" },
+					{ "caption": "Arabic (ISO 8859-6)", "command": "save", "args": { "async": true, "encoding": "Arabic (ISO 8859-6)" } },
+					{ "caption": "Arabic (Windows 1256)", "command": "save", "args": { "async": true, "encoding": "Arabic (Windows 1256)" } },
+					{ "caption": "Baltic (ISO 8859-4)", "command": "save", "args": { "async": true, "encoding": "Baltic (ISO 8859-4)" } },
+					{ "caption": "Baltic (Windows 1257)", "command": "save", "args": { "async": true, "encoding": "Baltic (Windows 1257)" } },
+					{ "caption": "Celtic (ISO 8859-14)", "command": "save", "args": { "async": true, "encoding": "Celtic (ISO 8859-14)" } },
+					{ "caption": "Central European (ISO 8859-2)", "command": "save", "args": { "async": true, "encoding": "Central European (ISO 8859-2)" } },
+					{ "caption": "Central European (Mac)", "command": "save", "args": { "async": true, "encoding": "Central European (Mac)" } },
+					{ "caption": "Central European (Windows 1250)", "command": "save", "args": { "async": true, "encoding": "Central European (Windows 1250)" } },
+					{ "caption": "Chinese (GB18030)", "command": "save", "args": { "async": true, "encoding": "Chinese (GB18030)" } },
+					{ "caption": "Cyrillic (ISO 8859-5)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (ISO 8859-5)" } },
+					{ "caption": "Cyrillic (KOI8-R)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (KOI8-R)" } },
+					{ "caption": "Cyrillic (KOI8-U)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (KOI8-U)" } },
+					{ "caption": "Cyrillic (Windows 1251)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (Windows 1251)" } },
+					{ "caption": "Cyrillic (Windows 866)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (Windows 866)" } },
+					{ "caption": "DOS (CP 437)", "command": "save", "args": { "async": true, "encoding": "DOS (CP 437)" } },
+					{ "caption": "Estonian (ISO 8859-13)", "command": "save", "args": { "async": true, "encoding": "Estonian (ISO 8859-13)" } },
+					{ "caption": "Greek (ISO 8859-7)", "command": "save", "args": { "async": true, "encoding": "Greek (ISO 8859-7)" } },
+					{ "caption": "Greek (Windows 1253)", "command": "save", "args": { "async": true, "encoding": "Greek (Windows 1253)" } },
+					{ "caption": "Hebrew (CP 862)", "command": "save", "args": { "async": true, "encoding": "Hebrew (CP 862)" } },
+					{ "caption": "Hebrew (ISO 8859-8)", "command": "save", "args": { "async": true, "encoding": "Hebrew (ISO 8859-8)" } },
+					{ "caption": "Hebrew (Windows 1255)", "command": "save", "args": { "async": true, "encoding": "Hebrew (Windows 1255)" } },
+					{ "caption": "Nordic (ISO 8859-10)", "command": "save", "args": { "async": true, "encoding": "Nordic (ISO 8859-10)" } },
+					{ "caption": "Nordic (Windows 865)", "command": "save", "args": { "async": true, "encoding": "Nordic (Windows 865)" } },
+					{ "caption": "Romanian (ISO 8859-16)", "command": "save", "args": { "async": true, "encoding": "Romanian (ISO 8859-16)" } },
+					{ "caption": "Turkish (ISO 8859-9)", "command": "save", "args": { "async": true, "encoding": "Turkish (ISO 8859-9)" } },
+					{ "caption": "Turkish (Windows 1254)", "command": "save", "args": { "async": true, "encoding": "Turkish (Windows 1254)" } },
+					{ "caption": "Vietnamese (Windows 1258)", "command": "save", "args": { "async": true, "encoding": "Vietnamese (Windows 1258)" } },
+					{ "caption": "Western (ISO 8859-1)", "command": "save", "args": { "async": true, "encoding": "Western (ISO 8859-1)" } },
+					{ "caption": "Western (ISO 8859-15)", "command": "save", "args": { "async": true, "encoding": "Western (ISO 8859-15)" } },
+					{ "caption": "Western (ISO 8859-3)", "command": "save", "args": { "async": true, "encoding": "Western (ISO 8859-3)" } },
+					{ "caption": "Western (Mac Roman)", "command": "save", "args": { "async": true, "encoding": "Western (Mac Roman)" } },
+					{ "caption": "Western (Windows 1252)", "command": "save", "args": { "async": true, "encoding": "Western (Windows 1252)" } },
+					{ "caption": "-" },
+					{ "caption": "Hexadecimal", "command": "save", "args": { "async": true, "encoding": "Hexadecimal" } }
+				]
+			},
+			{ "command": "prompt_save_as", "caption": "Uložit jako…", "mnemonic": "A" },
+			{ "command": "save_all", "caption": "Uložit vše", "mnemonic": "l" },
+			{ "command": "html_print", "caption": "Tisk…", "mnemonic": "P" },
+			{ "caption": "-", "id": "window" },
+			{ "command": "new_window", "caption": "Nové okno", "mnemonic": "W" },
+			{ "command": "close_window", "caption": "Zavřít okno" },
+			{ "caption": "-", "id": "close" },
+			{ "command": "close", "caption": "Zavřít soubor", "mnemonic": "C" },
+			{ "command": "revert", "caption": "Vrátit soubor", "mnemonic": "v" },
+			{ "command": "close_all", "caption": "Zavřít všechny soubory" },
+			{ "caption": "-", "id": "exit" },
+			{ "command": "exit", "caption": "Ukončit", "mnemonic": "x", "platform": "Windows" },
+			{ "command": "exit", "caption": "Ukončit", "mnemonic": "Q", "platform": "Linux" },
+		]
+	},
+	{
+		"caption": "Upravit",
+		"mnemonic": "E",
+		"id": "edit",
+		"children":
+		[
+			{ "command": "undo", "caption": "Zpět", "mnemonic": "U" },
+			{ "command": "redo_or_repeat", "caption": "Znovu", "mnemonic": "R" },
+			{
+				"caption": "Výběr zpět",
+				"children":
+				[
+					{ "command": "Pomalu zpět" },
+					{ "command": "Pomalu vpřed" }
+				]
+			},
+			{ "caption": "-", "id": "clipboard" },
+			{ "command": "cut", "caption": "Vyjmout", "mnemonic": "t" },
+			{ "command": "copy", "caption": "Kopírovat", "mnemonic": "C" },
+			{ "caption": "Kopírovat jako HTML", "command": "copy_as_html", "args": {"enclosing_tags": true, "font_size": false} },
+			{ "command": "paste", "caption": "Vložit", "mnemonic": "P" },
+			{ "command": "paste_and_indent", "caption": "Vložit a odsadit", "mnemonic": "I" },
+			{ "command": "paste_from_history", "caption": "Vložit z historie" },
+			{ "caption": "-" },
+			{
+				"caption": "Řádek", "mnemonic": "L",
+				"id": "line",
+				"children":
+				[
+					{ "command": "indent", "caption": "Odsadit" },
+					{ "command": "unindent", "caption": "Zrušit odsazení" },
+					{ "command": "reindent", "caption": "Znovu odsadit", "args": {"single_line": true} },
+					{ "command": "swap_line_up", "caption": "Posunout řádek nahoru" },
+					{ "command": "swap_line_down", "caption": "Posunout řádek dolů" },
+					{ "command": "duplicate_line", "caption": "Duplikovat řádek" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Smazat řádek" },
+					{ "command": "join_lines", "caption": "Spojit řádky" }
+				]
+			},
+			{
+				"caption": "Komentář", "mnemonic": "m",
+				"id": "comment",
+				"children":
+				[
+					{ "command": "toggle_comment", "args": {"block": false}, "caption": "Přepnout komentář" },
+					{ "command": "toggle_comment", "args": {"block": true}, "caption": "Přepnout blok komentářů" }
+				]
+			},
+			{
+				"caption": "Text", "mnemonic": "T",
+				"id": "text",
+				"children":
+				[
+					{ "command": "revert_hunk", "caption": "Vrátit kus" },
+					{ "command": "revert_modification", "caption": "Vrátit modifikaci" },
+					{ "command": "toggle_inline_diff", "caption": "Přepnout rozdíl" },
+					{ "caption": "-" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Vložit řádek před" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Vložit řádek po" },
+					{ "caption": "-" },
+					{ "command": "delete_word", "args": { "forward": true }, "caption": "Smazat slovo vpřed" },
+					{ "command": "delete_word", "args": { "forward": false }, "caption": "Smazat slovo zpět" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Smazat řádek" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Smazat do konce" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Smazat na začátek" },
+					{ "caption": "-" },
+					{ "command": "transpose", "caption": "Přemístit" }
+				]
+			},
+			{
+				"caption": "Tagy",
+				"id": "tag",
+				"children":
+				[
+					{ "command": "close_tag", "caption": "Zavřít tag" },
+					{ "command": "expand_selection", "args": {"to": "tag"}, "caption": "Rozšířit výběr do tagu" },
+					{ "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/xml-long-tag.sublime-snippet" }, "caption": "Zabalit výběr do tagu" }
+				]
+			},
+			{
+				"caption": "Označení",
+				"id": "mark",
+				"children":
+				[
+					{ "command": "set_mark", "caption": "Nastavit označení" },
+					{ "command": "select_to_mark", "caption": "Vybrat k označení" },
+					{ "command": "delete_to_mark", "caption": "Smazat z označení" },
+					{ "command": "swap_with_mark", "caption": "Vyměnit označení" },
+					{ "command": "clear_bookmarks", "args": {"name": "mark"}, "caption": "Vymazat označení" },
+					{ "caption": "-" },
+					{ "command": "Posunout dolů a rozdělit" }
+				]
+			},
+			{
+				"caption": "Skládání kódu",
+				"id": "fold",
+				"children":
+				[
+					{ "command": "fold", "caption": "Složit" },
+					{ "command": "unfold", "caption": "Rozložit" },
+					{ "command": "unfold_all", "caption": "Rozložit vše" },
+					{ "caption": "-" },
+					{ "caption": "Složit vše", "command": "fold_by_level", "mnemonic": "A", "args": {"level": 1} },
+					{ "caption": "Složit stupeň 2", "command": "fold_by_level", "mnemonic": "2", "args": {"level": 2} },
+					{ "caption": "Složit stupeň 3", "command": "fold_by_level", "mnemonic": "3", "args": {"level": 3} },
+					{ "caption": "Složit stupeň 4", "command": "fold_by_level", "mnemonic": "4", "args": {"level": 4} },
+					{ "caption": "Složit stupeň 5", "command": "fold_by_level", "mnemonic": "5", "args": {"level": 5} },
+					{ "caption": "Složit stupeň 6", "command": "fold_by_level", "mnemonic": "6", "args": {"level": 6} },
+					{ "caption": "Složit stupeň 7", "command": "fold_by_level", "mnemonic": "7", "args": {"level": 7} },
+					{ "caption": "Složit stupeň 8", "command": "fold_by_level", "mnemonic": "8", "args": {"level": 8} },
+					{ "caption": "Složit stupeň 9", "command": "fold_by_level", "mnemonic": "9", "args": {"level": 9} },
+					{ "caption": "-" },
+					{ "command": "fold_tag_attributes", "caption": "Složit hodnoty tagů" }
+				]
+			},
+			{
+				"caption": "Změnit znaky", "mnemonic": "a",
+				"id": "convert_case",
+				"children":
+				[
+					{ "command": "title_case", "caption": "První velké" },
+					{ "command": "upper_case", "caption": "Vše velké" },
+					{ "command": "lower_case", "caption": "Vše malé" },
+					{ "command": "swap_case", "caption": "Prohodit velké/malé" },
+					{ "command": "convert_ident_case", "caption": "Malé CamelCase", "args": {"case": "title", "first_case": "lower"} },
+					{ "command": "convert_ident_case", "caption": "Velké CamelCase", "args": {"case": "title"} },
+					{ "command": "convert_ident_case", "caption": "S podtržítkem Case", "args": {"separator": "_", "case": "lower"} },
+					{ "command": "convert_ident_case", "caption": "S pomlčkou Case", "args": {"separator": "-", "case": "lower"} },
+				]
+			},
+			{
+				"caption": "Zalomit",
+				"id": "wrap",
+				"children":
+				[
+					{ "command": "wrap_lines", "caption": "Zalomit odstavec na pravítku" },
+					{ "command": "wrap_lines", "args": {"width": 70}, "caption": "Zalomit odstavec na 70 znacích" },
+					{ "command": "wrap_lines", "args": {"width": 72}, "caption": "Zalomit odstavec at 72 znacích" },
+					{ "command": "wrap_lines", "args": {"width": 78}, "caption": "Zalomit odstavec at 78 znacích" },
+					{ "command": "wrap_lines", "args": {"width": 80}, "caption": "Zalomit odstavec at 80 znacích" },
+					{ "command": "wrap_lines", "args": {"width": 100}, "caption": "Zalomit odstavec at 100 znacích" },
+					{ "command": "wrap_lines", "args": {"width": 120}, "caption": "Zalomit odstavec at 120 znacích" }
+				]
+			},
+			{ "command": "auto_complete", "caption": "Zobrazit kompletace" },
+			{ "caption": "-", "id": "permute" },
+
+			{ "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Seřadit řádky", "mnemonic": "S" },
+			{ "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Seřadit řádky (Velká a malá)" },
+			{
+				"caption": "Obměnit řádky",
+				"children":
+				[
+					{ "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "Zpětně" },
+					{ "command": "permute_lines", "args": {"operation": "unique"}, "caption": "Jedinečně" },
+					{ "command": "permute_lines", "args": {"operation": "shuffle"}, "caption": "Zamíchat" }
+				]
+			},
+			{
+				"caption": "Obměnit výběry",
+				"children":
+				[
+					{ "command": "sort_selection", "args": {"case_sensitive": false}, "caption": "Třídit" },
+					{ "command": "sort_selection", "args": {"case_sensitive": true}, "caption": "Třídit (Velká a malá)" },
+					{ "command": "permute_selection", "args": {"operation": "reverse"}, "caption": "Zpětně" },
+					{ "command": "permute_selection", "args": {"operation": "unique"}, "caption": "Jedinečně" },
+					{ "command": "permute_selection", "args": {"operation": "shuffle"}, "caption": "Zamíchat" }
+				]
+			},
+			{ "caption": "-", "id": "end" }
+		]
+	},
+	{
+		"caption": "Výběr",
+		"mnemonic": "S",
+		"id": "selection",
+		"children":
+		[
+			{ "command": "split_selection_into_lines", "caption": "Rozdělit do řádků" },
+			{ "command": "single_selection", "caption": "Jednotlivý výběr" },
+			{ "caption": "-" },
+			{ "command": "select_all", "caption": "Vybrat vše" },
+			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "Rozšířit výběr" },
+			{ "command": "expand_selection", "args": {"to": "line"}, "caption": "Rozšířit výběr na řádek" },
+			{ "command": "expand_selection", "args": {"to": "line_prev"}, "caption": "Rozšířit výběr na řádek nahoru" },
+			{ "command": "find_under_expand", "caption": "Rozšířit výběr po slovo" },
+			{ "command": "expand_selection_to_paragraph", "caption": "Rozšířit výběr po blok" },
+			{ "command": "expand_selection_to_paragraph", "args": {"markup_aware": true}, "caption": "Rozšířit výběr po odstavec" },
+			{ "command": "expand_selection", "args": {"to": "scope"}, "caption": "Rozšířit výběr po rozsah" },
+			{ "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Rozšířit výběr po závorky" },
+			{ "command": "expand_selection", "args": {"to": "indentation"}, "caption": "Rozšířit výběr po odsazení" },
+			{ "caption": "-" },
+			{ "command": "select_lines", "args": {"forward": false}, "caption": "Přidat řádek před" },
+			{ "command": "select_lines", "args": {"forward": true}, "caption": "Přidat řádek po" },
+			{ "caption": "-" },
+			{
+				"caption": "Výběr panelu",
+				"children":
+				[
+					{ "command": "unselect_others", "caption": "Odznačit ostatní" },
+					{ "command": "unselect_to_left", "caption": "Odznačit vlevo" },
+					{ "command": "unselect_to_right", "caption": "Odznačit vpravo" },
+					{ "command": "unselect_current", "caption": "Odznačit současný" },
+					{ "caption": "-" },
+					{ "command": "select_to_left", "caption": "Vybrat vlevo" },
+					{ "command": "select_to_right", "caption": "Vybrat vpravo" },
+					{ "caption": "-" },
+					{ "command": "focus_to_left", "caption": "Zvýraznit vlevo" },
+					{ "command": "focus_to_right", "caption": "Zvýraznit vpravo" },
+					{ "caption": "-" },
+					{ "command": "focus_by_index", "args": {"index": 0}, "caption": "Zvýraznit vybraný panel 1", "mnemonic": "1" },
+					{ "command": "focus_by_index", "args": {"index": 1}, "caption": "Zvýraznit vybraný panel 2", "mnemonic": "2" },
+					{ "command": "focus_by_index", "args": {"index": 2}, "caption": "Zvýraznit vybraný panel 3", "mnemonic": "3" },
+					{ "command": "focus_by_index", "args": {"index": 3}, "caption": "Zvýraznit vybraný panel 4", "mnemonic": "4" },
+					{ "command": "focus_by_index", "args": {"index": 4}, "caption": "Zvýraznit vybraný panel 5", "mnemonic": "5" },
+					{ "command": "focus_by_index", "args": {"index": 5}, "caption": "Zvýraznit vybraný panel 6", "mnemonic": "6" },
+					{ "command": "focus_by_index", "args": {"index": 6}, "caption": "Zvýraznit vybraný panel 7", "mnemonic": "7" },
+					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "Zvýraznit vybraný panel 8", "mnemonic": "8" },
+					{ "command": "focus_by_index", "args": {"index": 8}, "caption": "Zvýraznit vybraný panel 9", "mnemonic": "9" },
+					{ "command": "focus_by_index", "args": {"index": 9}, "caption": "Zvýraznit vybraný panel 10" },
+				]
+			},
+		]
+	},
+	{
+		"caption": "Najít",
+		"mnemonic": "i",
+		"id": "find",
+		"children":
+		[
+			{ "command": "show_panel", "args": {"panel": "find", "reverse": false}, "caption": "Najít…" },
+			{ "command": "find_next", "caption": "Najít další" },
+			{ "command": "find_prev", "caption": "Najít předchozí" },
+			{ "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false}, "caption": "Přírůstkové hledání" },
+			{ "caption": "-" },
+			{ "command": "show_panel", "args": {"panel": "replace", "reverse": false}, "caption": "Nahradit" },
+			{ "command": "replace_next", "caption": "Nahradit další" },
+			{ "caption": "-" },
+			{ "command": "find_under", "caption": "Najít rychle" },
+			{ "command": "find_all_under", "caption": "Najít rychle vše" },
+			{ "command": "find_under_expand", "caption": "Najít rychle další" },
+			{ "command": "find_under_expand_skip", "caption": "Rychle zrušit další", "platform": "!OSX" },
+			{ "caption": "-" },
+			{ "command": "slurp_find_string", "caption": "Použít označení pro hledání" },
+			{ "command": "slurp_replace_string", "caption": "Použít označení pro náhradu" },
+			{ "caption": "-" },
+			{ "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "Najít v souborech…" },
+			{
+				"caption": "Výsledky hledání",
+				"mnemonic": "R",
+				"children":
+				[
+					{ "command": "show_panel", "args": {"panel": "output.find_results", "panel_name" : "Panel výsledků", "toggle" : true, "toggle_when_not_focused": true} },
+					{ "command": "next_result", "caption": "Další výsledek" },
+					{ "command": "prev_result", "caption": "Předchozí výsledek" }
+				]
+			},
+			{ "command": "cancel_find", "caption": "Zrušit hledání v souborech" },
+		]
+	},
+	{
+		"caption": "Zobrazit",
+		"mnemonic": "V",
+		"id": "view",
+		"children":
+		[
+			{
+				"caption": "Postranní panel",
+				"id": "side_bar",
+				"children":
+				[
+					{ "command": "toggle_side_bar", "caption": "Zobrazit/Skrýt" },
+					{ "caption": "-" },
+					{ "command": "toggle_show_open_files", "caption": "Zobrazit/Skrýt otevřené soubory" }
+				]
+			},
+			{ "command": "toggle_minimap" },
+			{ "command": "toggle_tabs" },
+			{ "command": "toggle_status_bar" },
+			{ "command": "toggle_menu" },
+			{ "command": "show_panel", "args": {"panel": "console", "toggle": true}, "caption": "Zobrazit konzoli" },
+			{ "caption": "-", "id": "full_screen" },
+			{ "command": "toggle_full_screen", "caption": "Přepnout na celou obrazovku" },
+			{ "command": "toggle_distraction_free", "caption": "Přepnout do módu bez rozptylování" },
+			{ "caption": "-", "id": "groups" },
+			{
+				"caption": "Rozvržení",
+				"mnemonic": "L",
+				"id": "layout",
+				"children":
+				[
+					{
+						"caption": "Samostatné",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 1.0],
+							"rows": [0.0, 1.0],
+							"cells": [[0, 0, 1, 1]]
+						}
+					},
+					{
+						"caption": "Sloupce: 2",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 0.5, 1.0],
+							"rows": [0.0, 1.0],
+							"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+						}
+					},
+					{
+						"caption": "Sloupce: 3",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 0.33, 0.66, 1.0],
+							"rows": [0.0, 1.0],
+							"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+						}
+					},
+					{
+						"caption": "Sloupce: 4",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 0.25, 0.5, 0.75, 1.0],
+							"rows": [0.0, 1.0],
+							"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]
+						}
+					},
+					{
+						"caption": "Řádky: 2",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 1.0],
+							"rows": [0.0, 0.5, 1.0],
+							"cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+						}
+					},
+					{
+						"caption": "Řádky: 3",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 1.0],
+							"rows": [0.0, 0.33, 0.66, 1.0],
+							"cells": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]
+						}
+					},
+					{
+						"caption": "Mřížka: 4",
+						"command": "set_layout",
+						"args":
+						{
+							"cols": [0.0, 0.5, 1.0],
+							"rows": [0.0, 0.5, 1.0],
+							"cells":
+							[
+								[0, 0, 1, 1], [1, 0, 2, 1],
+								[0, 1, 1, 2], [1, 1, 2, 2]
+							]
+						}
+					}
+				]
+			},
+			{
+				"caption": "Skupiny",
+				"children":
+				[
+					{ "command": "new_pane", "caption": "Přesunout soubor do nové skupiny" },
+					{ "command": "new_pane", "args": {"move": false}, "caption": "Nová skupina" },
+					{ "command": "close_pane", "caption": "Zavřít skupinu" },
+
+					{ "caption": "-" },
+
+					{
+						"caption": "Maximum sloupců: 1",
+						"command": "set_max_columns",
+						"checkbox": true,
+						"args": { "columns": 1 },
+						"mnemonic": "1",
+					},
+					{
+						"caption": "Maximum sloupců: 2",
+						"command": "set_max_columns",
+						"checkbox": true,
+						"args": { "columns": 2 },
+						"mnemonic": "2",
+					},
+					{
+						"caption": "Maximum sloupců: 3",
+						"command": "set_max_columns",
+						"checkbox": true,
+						"args": { "columns": 3 },
+						"mnemonic": "3",
+					},
+					{
+						"caption": "Maximum sloupců: 4",
+						"command": "set_max_columns",
+						"checkbox": true,
+						"args": { "columns": 4 },
+						"mnemonic": "4",
+					},
+					{
+						"caption": "Maximum sloupců: 5",
+						"command": "set_max_columns",
+						"checkbox": true,
+						"args": { "columns": 5 },
+						"mnemonic": "5",
+					},
+				]
+			},
+			{
+				"caption": "Zvýraznit skupinu",
+				"mnemonic": "F",
+				"children":
+				[
+
+					{ "command": "focus_neighboring_group", "caption": "Další" },
+					{ "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "Předchozí" },
+					{ "caption": "-" },
+					{ "command": "focus_group", "args": {"group": 0}, "caption": "Group 1", "mnemonic": "1" },
+					{ "command": "focus_group", "args": {"group": 1}, "caption": "Group 2", "mnemonic": "2" },
+					{ "command": "focus_group", "args": {"group": 2}, "caption": "Group 3", "mnemonic": "3" },
+					{ "command": "focus_group", "args": {"group": 3}, "caption": "Group 4", "mnemonic": "4" }
+				]
+			},
+			{
+				"caption": "Přesunout soubor do skupiny",
+				"mnemonic": "M",
+				"children":
+				[
+					{ "command": "move_to_neighboring_group", "caption": "Další" },
+					{ "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "Předchozí" },
+					{ "caption": "-" },
+					{ "command": "move_to_group", "args": {"group": 0}, "caption": "Group 1", "mnemonic": "1" },
+					{ "command": "move_to_group", "args": {"group": 1}, "caption": "Group 2", "mnemonic": "2" },
+					{ "command": "move_to_group", "args": {"group": 2}, "caption": "Group 3", "mnemonic": "3" },
+					{ "command": "move_to_group", "args": {"group": 3}, "caption": "Group 4", "mnemonic": "4" }
+				]
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Syntaxe",
+				"mnemonic": "S",
+				"id": "syntax",
+				"children": [ { "command": "$file_types" } ]
+			},
+			{
+				"caption": "Odsazení",
+				"mnemonic": "I",
+				"id": "indentation",
+				"children":
+				[
+					{ "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Odsazení pomocí mezer", "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Šířka tabulátoru: 1", "mnemonic": "1", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Šířka tabulátoru: 2", "mnemonic": "2", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Šířka tabulátoru: 3", "mnemonic": "3", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Šířka tabulátoru: 4", "mnemonic": "4", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Šířka tabulátoru: 5", "mnemonic": "5", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Šířka tabulátoru: 6", "mnemonic": "6", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Šířka tabulátoru: 7", "mnemonic": "7", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Šířka tabulátoru: 8", "mnemonic": "8", "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "detect_indentation", "caption": "Odhadnout nastavení z paměti" },
+					{ "caption": "-" },
+					{ "command": "expand_tabs", "caption": "Převést odsazení na mezery", "args": {"set_translate_tabs": true} },
+					{ "command": "unexpand_tabs", "caption": "Převést odsazení na tabulátory", "args": {"set_translate_tabs": true} }
+				]
+			},
+			{
+				"caption": "Konce řádků",
+				"mnemonic": "n",
+				"id": "line_endings",
+				"children":
+				[
+					{ "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Windows", "checkbox": true },
+					{ "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Unix", "checkbox": true },
+					{ "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Mac OS 9", "checkbox": true }
+				]
+			},
+			{ "caption": "-", "id": "settings" },
+			{ "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Zalamování slov", "mnemonic": "W", "checkbox": true },
+			{
+				"caption": "Šířka zalamování slov",
+				"children":
+				[
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Automatická", "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 120}, "caption": "120", "checkbox": true }
+				]
+			},
+			{
+				"caption": "Pravítko",
+				"children":
+				[
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Žádné", "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [120]}, "caption": "120", "checkbox": true }
+				]
+			},
+			{ "caption": "-" },
+			{ "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "Kontrola pravopisu", "checkbox": true },
+			{ "command": "next_misspelling" },
+			{ "command": "prev_misspelling" },
+			{
+				"caption": "Slovník",
+				"children": [ { "command": "$dictionaries" } ]
+			}
+		]
+	},
+	{
+		"caption": "Jít na",
+		"mnemonic": "G",
+		"id": "goto",
+		"children":
+		[
+			{ "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "Jít na…", "mnemonic": "A" },
+			{ "caption": "-" },
+			{ "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Jít na symbol…" },
+			{ "command": "goto_symbol_in_project", "caption": "Jít na symbol v projektu…" },
+			{ "command": "goto_definition", "caption": "Jít na definici…" },
+			{ "command": "goto_reference", "caption": "Jít na referenci …" },
+			// { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
+			{ "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Jít na řádek…" },
+			{ "caption": "-" },
+			{ "command": "next_modification", "caption": "Další změna" },
+			{ "command": "prev_modification", "caption": "Předchozí změna" },
+			{ "caption": "-" },
+			{ "command": "jump_back", "caption": "Dopředu" },
+			{ "command": "jump_forward", "caption": "Dozadu" },
+			{ "caption": "-" },
+			{
+				"caption": "Přepnout soubor",
+				"mnemonic": "t",
+				"id": "switch_file",
+				"children":
+				[
+					{ "command": "next_view", "caption": "Další soubor" },
+					{ "command": "prev_view", "caption": "Předchozí soubor" },
+					{ "caption": "-" },
+					{ "command": "next_view_in_stack", "caption": "Další soubor ve stohu" },
+					{ "command": "prev_view_in_stack", "caption": "Předchozí soubor ve stohu" },
+					{ "caption": "-" },
+					{ "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]}, "caption": "Přepnout hlavičku/implementaci", "mnemonic": "H" },
+					{ "caption": "-" },
+					{ "command": "select_by_index", "args": { "index": 0 } },
+					{ "command": "select_by_index", "args": { "index": 1 } },
+					{ "command": "select_by_index", "args": { "index": 2 } },
+					{ "command": "select_by_index", "args": { "index": 3 } },
+					{ "command": "select_by_index", "args": { "index": 4 } },
+					{ "command": "select_by_index", "args": { "index": 5 } },
+					{ "command": "select_by_index", "args": { "index": 6 } },
+					{ "command": "select_by_index", "args": { "index": 7 } },
+					{ "command": "select_by_index", "args": { "index": 8 } },
+					{ "command": "select_by_index", "args": { "index": 9 } }
+				]
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Rolování",
+				"mnemonic": "S",
+				"id": "scroll",
+				"children":
+				[
+					{ "command": "show_at_center", "caption": "Přejít k výběru" },
+					{ "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Řádek nahoru" },
+					{ "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Řádek dolů" }
+				]
+			},
+			{
+				"caption": "Záložky",
+				"mnemonic": "B",
+				"id": "bookmarks",
+				"children":
+				[
+					{ "command": "toggle_bookmark", "caption": "Prohodit záložky", "args": {"toggle_line": true } },
+					{ "command": "next_bookmark", "caption": "Další záložka" },
+					{ "command": "prev_bookmark", "caption": "Předchozí záložka" },
+					{ "command": "clear_bookmarks", "caption": "Vymazat záložky" },
+					{ "command": "select_all_bookmarks", "caption": "Označit všechny záložky" },
+					{ "caption": "-" },
+					{ "command": "select_bookmark", "args": {"index": 0} },
+					{ "command": "select_bookmark", "args": {"index": 1} },
+					{ "command": "select_bookmark", "args": {"index": 2} },
+					{ "command": "select_bookmark", "args": {"index": 3} },
+					{ "command": "select_bookmark", "args": {"index": 4} },
+					{ "command": "select_bookmark", "args": {"index": 5} },
+					{ "command": "select_bookmark", "args": {"index": 6} },
+					{ "command": "select_bookmark", "args": {"index": 7} },
+					{ "command": "select_bookmark", "args": {"index": 8} },
+					{ "command": "select_bookmark", "args": {"index": 9} },
+					{ "command": "select_bookmark", "args": {"index": 10} },
+					{ "command": "select_bookmark", "args": {"index": 11} },
+					{ "command": "select_bookmark", "args": {"index": 12} },
+					{ "command": "select_bookmark", "args": {"index": 13} },
+					{ "command": "select_bookmark", "args": {"index": 14} },
+					{ "command": "select_bookmark", "args": {"index": 15} }
+				]
+			},
+			{ "caption": "-" },
+			{ "command": "move_to", "args": {"to": "brackets"}, "caption": "Přejít na související závorku" }
+		]
+	},
+	{
+		"caption": "Nástroje",
+		"mnemonic": "T",
+		"id": "tools",
+		"children":
+		[
+			{ "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Paleta přkazů…" },
+			{ "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Bloky kódů…" },
+			{ "caption": "-", "id": "build" },
+			{
+				"caption": "Systém sestavení",
+				"mnemonic": "u",
+				"children":
+				[
+					{ "command": "set_build_system", "args": { "file": "" }, "caption": "Automaticky", "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "set_build_system", "args": {"index": 0}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 1}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 2}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 3}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 4}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 5}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 6}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 7}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 8}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 9}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 10}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 11}, "checkbox": true },
+					{ "caption": "-" },
+					{ "command": "$build_systems" },
+					{ "caption": "-" },
+					{ "command": "new_build_system", "caption": "Nový systém sestavení…" }
+				]
+			},
+			{ "command": "build", "caption": "Sestavit", "mnemonic": "B" },
+			{ "command": "build", "args": {"select": true}, "caption": "Sestavit s…" },
+			{ "command": "cancel_build", "caption": "Zrušit sestavení", "mnemonic": "C" },
+			{
+				"caption": "Sestavit výsledky",
+				"mnemonic": "R",
+				"children":
+				[
+					{ "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Zobrazit výsledky sestavení", "mnemonic": "S" },
+					{ "command": "next_result", "caption": "Další výsledek", "mnemonic": "N" },
+					{ "command": "prev_result", "caption": "Předchozí výsledek", "mnemonic": "P" }
+				]
+			},
+			{ "command": "toggle_save_all_on_build", "caption": "Uložit vše při sestavení", "mnemonic": "A", "checkbox": true },
+			{ "caption": "-", "id": "macros" },
+			{ "command": "toggle_record_macro", "caption": "Nahrát makro", "mnemonic": "M" },
+			{ "command": "run_macro", "caption": "Přehrát makro", "mnemonic": "P" },
+			{ "command": "save_macro", "caption": "Uložit makro…", "mnemonic": "v" },
+			{
+				"caption": "Makra",
+				"children": [ { "command": "$macros" } ]
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Vývojář",
+				"children":
+				[
+					{ "command": "new_plugin", "caption": "Nový plugin…" },
+					{ "command": "new_snippet", "caption": "Nový blok kódu…" },
+					{ "command": "new_syntax", "caption": "Nová syntaxe…" },
+					{ "command": "convert_syntax", "caption": "Nová syntaxe z prostého textu…" },
+					{ "caption": "-" },
+					{ "caption": "-" },
+					{ "command": "profile_plugins", "caption": "Profil pluginů" },
+					{ "caption": "-" },
+					{ "command": "view_resource", "caption": "Zobrazit soubor balíčku…" },
+					{ "command": "show_scope_name", "caption": "Zobrazit název souboru" },
+				]
+			},
+			{ "command": "install_package_control", "caption": "Instalovat správce balíčků…" },
+			{ "caption": "-", "id": "end" }
+		]
+	},
+	{
+		"caption": "Projekt",
+		"id": "project",
+		"mnemonic": "P",
+		"children":
+		[
+			{ "command": "prompt_open_project_or_workspace", "caption": "Otevřít projekt…" },
+			{ "command": "prompt_switch_project_or_workspace", "caption": "Přepnout projekt…" },
+			{ "command": "prompt_select_workspace", "caption": "Rychle přepnout projekt…", "mnemonic": "S" },
+			{
+				"caption": "Otevřít nedávné",
+				"children":
+				[
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 1 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 2 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 3 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 4 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 5 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
+					{ "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
+					{ "caption": "-" },
+					{ "command": "clear_recent_projects_and_workspaces", "caption": "Vymazat položky" },
+					{ "command": "clear_missing_recent_projects_and_workspaces", "caption": "Odstranit smazané" },
+				]
+			},
+			{ "caption": "-" },
+			{ "command": "save_project_and_workspace_as", "caption": "Uložit projekt jako…", "mnemonic": "A" },
+			{ "command": "close_workspace", "caption": "Close Project", "mnemonic": "C" },
+			{ "command": "open_file", "args": {"file": "${project}"}, "caption": "Upravit projekt" },
+			{ "caption": "-" },
+			{ "command": "new_window_for_project", "caption": "Nový pracovní prostor pro projekt" },
+			{ "command": "save_workspace_as", "caption": "Uložit pracovní prostor jako…", "mnemonic": "A" },
+			{ "caption": "-" },
+			{ "command": "prompt_add_folder", "caption": "Přidat složku do projektu…", "mnemonic": "d" },
+			{ "command": "close_folder_list", "caption": "Odstranit všechny složky z projektu", "mnemonic": "m" },
+			{ "command": "refresh_folder_list", "caption": "Načist složky", "mnemonic": "e" },
+		]
+	},
+	{
+		"caption": "Předvolby",
+		"mnemonic": "n",
+		"id": "preferences",
+		"children":
+		[
+			{ "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Procházet balíčky…", "mnemonic": "B" },
+			{ "caption": "-" },
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/Default/Preferences.sublime-settings",
+					"default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+				},
+				"caption": "Settings"
+			},
+			{ "command": "edit_syntax_settings", "caption": "Nastavení – specifické pro syntaxi" },
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/Default/Distraction Free.sublime-settings",
+					"default": "{\n\t$0\n}\n"
+				},
+				"caption": "Nastavení – Bez rozptylování"
+			},
+			{ "caption": "-" },
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+					"default": "[\n\t$0\n]\n"
+				},
+				"caption": "Vazby pro klávesnici"
+			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/Default/Default ($platform).sublime-mousemap",
+					"default": "[\n\t$0\n]\n"
+				},
+				"caption": "Vazby pro myš"
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Zvolit barevný motiv…",
+				"command": "select_color_scheme"
+			},
+			{
+				"caption": "Přizpůsobit barevný motiv",
+				"command": "customize_color_scheme"
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Zvolit motiv…",
+				"command": "select_theme"
+			},
+			{
+				"caption": "Přizpůsobit motiv",
+				"command": "customize_theme"
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Font",
+				"children":
+				[
+					{ "command": "choose_font", "caption": "Zvolte…" },
+					{ "command": "increase_font_size", "caption": "Větší" },
+					{ "command": "decrease_font_size", "caption": "Menší" },
+					{ "caption": "-" },
+					{ "command": "reset_font_size", "caption": "Původní velikost" }
+				]
+			},
+		]
+	},
+	{
+		"caption": "Nápověda",
+		"mnemonic": "H",
+		"id": "help",
+		"children":
+		[
+			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/"}, "caption": "Dokumentace" },
+			{ "command": "open_url", "args": {"url": "https://github.com/sublimehq/sublime_text/issues/new/choose"}, "caption": "Nahlásit chybu" },
+			{ "command": "open_url", "args": {"url": "https://twitter.com/sublimehq"}, "caption": "Twitter" },
+			{ "caption": "-" },
+			{ "command": "show_progress_window", "caption": "Stav indexace…" },
+			{ "caption": "-" },
+			{ "command": "purchase_license", "caption": "Zakoupit licenci"},
+			{ "command": "upgrade_license"},
+			{ "command": "show_license_window", "caption": "Vložit licenci" },
+			{ "command": "remove_license"},
+			{ "caption": "-" },
+			{ "command": "update_check", "caption": "Zkontrolovat aktualizace…" },
+			{ "command": "show_changelog", "caption": "Seznam změn…" },
+			{ "command": "show_attribution", "caption": "Licence a autoři…" },
+			{ "command": "show_about_window", "caption": "O Sublime Text", "mnemonic": "A" }
+		]
+	}
+]

@@ -1,0 +1,17 @@
+[
+	{ "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Odsazení pomocí mezer", "checkbox": true },
+	{ "caption": "-" },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Šířka tabulátoru: 1", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Šířka tabulátoru: 2", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Šířka tabulátoru: 3", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Šířka tabulátoru: 4", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Šířka tabulátoru: 5", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Šířka tabulátoru: 6", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Šířka tabulátoru: 7", "checkbox": true },
+	{ "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Šířka tabulátoru: 8", "checkbox": true },
+	{ "caption": "-" },
+	{ "command": "detect_indentation", "caption": "Odhadnout nastavení z paměti" },
+	{ "caption": "-" },
+	{ "command": "expand_tabs", "caption": "Převést odsazení na mezery", "args": {"set_translate_tabs": true} },
+	{ "command": "unexpand_tabs", "caption": "Převést odsazení na tabulátory", "args": {"set_translate_tabs": true} }
+ ]

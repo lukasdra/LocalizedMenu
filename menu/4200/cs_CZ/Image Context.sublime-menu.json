@@ -1,0 +1,11 @@
+[
+    { "caption": "-", "id": "repo_commands" },
+    { "caption": "Otevřít repozitář Gitu…", "command": "sublime_merge_open_repo" },
+    { "caption": "Historie souboru…", "command": "sublime_merge_file_history" },
+    { "caption": "-", "id": "file" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Otevřít obsahující složku…" },
+    { "command": "copy_path", "caption": "Kopírovat cestu souboru" },
+    { "command": "reveal_in_side_bar", "caption": "Zobrazit v postraním panelu" },
+    { "command": "force_reopen_as", "args": {"type": "text"}, "caption": "Zovu otevřít soubor jako text" },
+    { "caption": "-", "id": "end" }
+]

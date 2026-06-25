@@ -1,0 +1,10 @@
+[
+	{ "command": "clear_location", "caption": "Vyčistit" },
+	{ "command": "add_directory", "caption": "Přidat složku" },
+	{ "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Přidat filtr včetně" },
+	{ "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Přidat filtr kromě" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<project filters>"}, "caption": "Přidat filtry projektu" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Přidat otevřené složky" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Přidat otevřené soubory" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Přidat aktuální soubor" },
+]

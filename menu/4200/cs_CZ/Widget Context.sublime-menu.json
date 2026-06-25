@@ -1,0 +1,9 @@
+[
+	{ "command": "open_context_url" },
+	{ "caption": "-" },
+	{ "command": "cut", "caption": "Vyjmout" },
+	{ "command": "copy", "caption": "Kopírovat" },
+	{ "command": "paste", "caption": "Vložit" },
+	{ "caption": "-" },
+	{ "command": "select_all", "caption": "Vybrat vše" }
+]
